@@ -1,8 +1,8 @@
 # Daily-Scheduler
 - A simple calendar application that allows a user to save events for each hour of the day.
 
-## link
-launch day planner [here]()
+## Link
+Launch day planner ---> [here]()
 
 ## User Story
 - GIVEN I am using a daily planner to create a schedule
@@ -25,7 +25,7 @@ launch day planner [here]()
 - JavaScript 
 - jQuery
 
-## screenshots
-How the app should look when loaded.
+## Screenshots
+How the app should look when loaded --->
 
-![image](dailyScheduler.png)
+![image](assets/dailyScheduler.png)
