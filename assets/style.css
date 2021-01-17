@@ -46,14 +46,17 @@ input {
 }
 
 .timeBox {
-    background-color: #99ffcc;
+    background-color: pink;
     color: black;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
     height: 100%;
     width: 100%;
     text-align: center;
     border-radius: 15px 0px 0px 15px;
     display: inline-block;
-    font-size: 1.25em;
+    font-size: 2em;
 }
 
 .dailyPlan {
