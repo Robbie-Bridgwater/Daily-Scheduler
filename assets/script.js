@@ -1,4 +1,5 @@
-// These are the base constant variables I will need for my code.
+// These are the base constant variables I will need for my code. 
+// The added benefit of having "START_HOUR" and "END_HOUR". Is that you can now easily change the range of times the Scheduler applies to.
 const START_HOUR = 9;
 const END_HOUR = 17;
 const NOW_HOUR_24 = moment().format('H');
@@ -21,7 +22,7 @@ if (storedScheduleItems !== null) {
 } else {
     // ... else -
     // NB/ This should only occur the first time the app is loaded into the browser.
-    // This sets the initial value of scheduleItemArr on load-up, to a Hobbit meal plan to helpfully remind the user that food and Lord of The Rings are awesome;
+    // This sets the initial value of scheduleItemArr to a Hobbit meal plan - to helpfully remind the user that food and Lord of The Rings are awesome.
     scheduleItemArray = ["Breakfast", "Second Breakfast", "", "Elevenses", "Luncheon", "Afternoon Tea", "Dinner", "", "Supper"];
 }
 
@@ -29,20 +30,21 @@ if (storedScheduleItems !== null) {
 // This forLoop creates the content of the page dynamically.
 for (let hour = START_HOUR; hour <= END_HOUR; hour++) {
 
+    // This is an offset created so that within this forLoop I can loop from 0 and create the indices for some of the dynamic content.
     let index = hour - START_HOUR;
 
     // This initialises a variable called containerDiv.
     // The value is the "container" div from the HTML document.
     let containerDiv = $('#container')
 
-    // This builds the row component and utilises bootstrap for layout.
+    // This builds the row components (using bootstrap for layout).
     let rowDiv = $('<div>');
     rowDiv.addClass('row');
     rowDiv.addClass('scheduleRow');
     rowDiv.attr('hour-index', hour);
     updateRowColor(rowDiv, hour);
 
-    // This builds the column components for the boxes that will contain the times and utilises bootstrap for layout.
+    // This builds the column components for the segments that will contain the times (using bootstrap for layout).
     let timeColDiv = $('<div>');
     timeColDiv.addClass('col-md-2');
     const timeBoxSpan = $('<span>');
@@ -51,7 +53,7 @@ for (let hour = START_HOUR; hour <= END_HOUR; hour++) {
     rowDiv.append(timeColDiv);
     timeColDiv.append(timeBoxSpan);
 
-    // This builds the column components for the boxes that will contain the schedule and utilises bootstrap for layout.
+    // This builds the column components for the segments that will contain the schedule items (using bootstrap for layout).
     let scheduleDiv = $('<div>');
     scheduleDiv.addClass('col-md-9');
     let scheduleItems = $('<input>');
@@ -62,7 +64,7 @@ for (let hour = START_HOUR; hour <= END_HOUR; hour++) {
     rowDiv.append(scheduleDiv);
     scheduleDiv.append(scheduleItems);
 
-    // This builds the column components for the boxes that will contain the save icons and utilises bootstrap for layout and the save icon.
+    // This builds the save icons and the column components for those icons (using bootstrap for layout icons).
     let saveIconDiv = $('<div>');
     saveIconDiv.addClass('col-md-1 save_column');
     let saveBtn = $('<i>');
@@ -71,6 +73,7 @@ for (let hour = START_HOUR; hour <= END_HOUR; hour++) {
     rowDiv.append(saveIconDiv);
     saveIconDiv.append(saveBtn);
 
+    // This appends all the rows and contents to the HTML.
     containerDiv.append(rowDiv);
 };
 
@@ -78,15 +81,18 @@ for (let hour = START_HOUR; hour <= END_HOUR; hour++) {
 function updateRowColor(hourRow, hour) {
 
     if (hour < NOW_HOUR_24) {
+        // i.e. if it is before now then...
         hourRow.css("background-color", "lightgrey")
     } else if (hour > NOW_HOUR_24) {
+        // i.e. if it is later now then...
         hourRow.css("background-color", "lightgreen")
     } else {
+        // i.e. if it is equal to now then...
         hourRow.css("background-color", "tomato")
     }
 };
 
-// This intialises an onclick function to the schedule area and sets it in local storage.
+// This intialises an onclick function to the schedule area to set it to local storage.
 $(document).on('click', 'i', function(event) {
 
     event.preventDefault();
