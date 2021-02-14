@@ -3,7 +3,6 @@ const START_HOUR = 9;
 const END_HOUR = 17;
 const NOW_HOUR_24 = moment().format('H');
 const NOW = moment().format('dddd' + ', ' + 'MMMM Do');
-// I have to 
 
 // This initiliases a variable called dateHeading.
 // The value being the "currentDay" div from the HTML.
