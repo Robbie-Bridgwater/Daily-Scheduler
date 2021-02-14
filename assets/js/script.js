@@ -3,7 +3,7 @@ const START_HOUR = 9;
 const END_HOUR = 17;
 const NOW_HOUR_24 = moment().format('H');
 const NOW = moment().format('dddd' + ', ' + 'MMMM Do');
-// I have to add 6 commits to my commit 
+// I have to add 6 commits
 
 // This initiliases a variable called dateHeading.
 // The value being the "currentDay" div from the HTML.
