@@ -28,4 +28,5 @@ Launch the app ---> [here](https://robbie-bridgwater.github.io/Homework_week6/)
 ## Screenshots
 How the app should look when loaded --->
 
-![image](assets/dailyScheduler.png)
+![image](assets/img/dailyScheduler.png)
+![image](assets/img/dailyScheduler2.png)
