@@ -23,7 +23,7 @@ Launch the app ---> [here](https://robbie-bridgwater.github.io/Homework_week6/)
 - HTML 
 - CSS 
 - JavaScript 
-- jQuery
+- jQuery (library)
 
 ## Screenshots
 How the app should look when loaded --->
