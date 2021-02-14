@@ -30,3 +30,6 @@ How the app should look when loaded --->
 
 ![image](assets/img/dailyScheduler.png)
 ![image](assets/img/dailyScheduler2.png)
+
+## Contact Information
+- Email: Robbie_Bridgwater@hotmail.co.uk
