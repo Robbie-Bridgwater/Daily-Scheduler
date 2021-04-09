@@ -2,7 +2,7 @@
 - A simple calendar application that allows a user to save events for each hour of the day.
 
 ## Link
-Launch the app ---> [here](https://robbie-bridgwater.github.io/Homework_week6/)
+Launch the app ---> [here](https://robbie-bridgwater.github.io/Daily-Scheduler/)
 
 ## User Story
 - GIVEN I am using a daily planner to create a schedule
